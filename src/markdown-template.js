@@ -12,8 +12,11 @@ ${data.description}
 
 * [Installation](#installation)
 * [Usage](#usage)
-* [Credits](#credits)
+* [Contribution](#contribution)
+* [Test](#test)
 * [License](#license)
+* [GitHub](#github)
+* [Email](#email)
 
 ## Installation
 ${data.installation}
