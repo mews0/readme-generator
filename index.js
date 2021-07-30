@@ -1,9 +1,7 @@
-// TODO: Include packages needed for this application
 const inquirer = require(`inquirer`);
-const fs = require(`fs`);
-const generateMarkdown = require(`./utils/generateMarkdown.js`);
+const generateMarkdown = require(`./src/markdown-template.js`);
+const writeFile = require(`./utils/generate-markdown.js`);
 
-// TODO: Create an array of questions for user input
 const promptUser = () => {
   console.log(`
 ================
@@ -128,24 +126,13 @@ README Generator
     });
 };
 
-// this function might go inside init()
 promptUser()
-  // then generate markdown
   .then(answers => {
     return generateMarkdown(answers);
-    // then write to markdown file
+  })
+  .then(markdown => {
+    return writeFile(markdown);
+  })
+  .catch(err => {
+    console.log(err);
   });
-// catch
-
-// TODO: Create a function to write README file
-const writeToFile = (fileName, data) => {
-
-};
-
-// I don't know if the init() function is necessary
-
-// TODO: Create a function to initialize app
-init = () => {}
-
-// Function call to initialize app
-init();
