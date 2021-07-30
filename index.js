@@ -122,24 +122,30 @@ README Generator
       }
     }
   ])
-  .then(answers => {
-    console.log(answers);
-    return answers;
-  });
+    .then(answers => {
+      console.log(answers);
+      return answers;
+    });
 };
 
 // this function might go inside init()
-promptUser();
-// then
+promptUser()
+  // then generate markdown
+  .then(answers => {
+    return generateMarkdown(answers);
+    // then write to markdown file
+  });
 // catch
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+const writeToFile = (fileName, data) => {
+
+};
 
 // I don't know if the init() function is necessary
 
 // TODO: Create a function to initialize app
-function init() {}
+init = () => {}
 
 // Function call to initialize app
 init();
