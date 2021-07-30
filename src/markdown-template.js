@@ -4,7 +4,7 @@ generateMarkdown = data => {
   
   return `# ${data.title}
 
-https://img.shields.io/badge/license-${data.license}-blue
+![Badge](https://img.shields.io/badge/license-${data.license}-blue)
 
 ${data.description}
 
