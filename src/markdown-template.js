@@ -1,10 +1,9 @@
 generateMarkdown = data => {
-  // if data.license contains spaces, then convert spaces to '%20' for correct URL
-  data.license = data.license.replace(` `, `%20`);
-  
-  return `# ${data.title}
 
-![Badge](https://img.shields.io/badge/license-${data.license}-blue)
+  // if data.license contains spaces, then convert spaces to '%20' for correct URL
+  return `# ${data.title}
+  
+![Badge](https://img.shields.io/badge/license-${data.license.replace(` `, `%20`)}-blue)
 
 ${data.description}
 
